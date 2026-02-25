@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern CSS Documentation</title>
+    <style>
+        :root {
+            --sidebar-width: 300px;
+            --main-bg: #ffffff;
+            --nav-bg: #2c3e50;
+            --accent: #3498db;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            display: flex;
+        }
+
+        #navbar {
+            position: fixed;
+            min-width: var(--sidebar-width);
+            width: var(--sidebar-width);
+            height: 100%;
+            background-color: var(--nav-bg);
+            border-right: 2px solid #ddd;
+            overflow-y: auto;
+            top: 0;
+            left: 0;
+        }
+
+        #navbar header {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #444;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 15px 25px;
+            color: #bdc3c7;
+            text-decoration: none;
+            border-bottom: 1px solid #34495e;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        #main-doc {
+            margin-left: var(--sidebar-width);
+            padding: 20px 40px;
+            width: 100%;
+        }
+
+        .main-section header {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 20px;
+            color: var(--nav-bg);
+        }
+
+        code {
+            display: block;
+            background-color: #f4f4f4;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid var(--accent);
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-line;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            #navbar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 2px solid #ddd;
+            }
+            #main-doc {
+                margin-left: 0;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <header>CSS Documentation</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Flexbox_Layout">Flexbox Layout</a>
+        <a class="nav-link" href="#CSS_Grid">CSS Grid</a>
+        <a class="nav-link" href="#Variables_and_Root">Variables and Root</a>
+        <a class="nav-link" href="#Responsive_Design">Responsive Design</a>
+    </nav>
+
+    <main id="main-doc">
+        
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>Cascading Style Sheets (CSS) is a stylesheet language used for describing the presentation of a document written in HTML.</p>
+            <p>Modern CSS allows for complex layouts without the need for heavy JavaScript interference.</p>
+            <code>body { background-color: #fff; }</code>
+        </section>
+
+        <section class="main-section" id="Flexbox_Layout">
+            <header>Flexbox Layout</header>
+            <p>Flexbox is a one-dimensional layout method for arranging items in rows or columns.</p>
+            <p>Items flex to fill additional space and shrink to fit into smaller spaces.</p>
+            <code>.container { display: flex; justify-content: center; }</code>
+            <ul>
+                <li>Flex-direction</li>
+                <li>Justify-content</li>
+                <li>Align-items</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="CSS_Grid">
+            <header>CSS Grid</header>
+            <p>CSS Grid Layout is a two-dimensional layout system for the web.</p>
+            <p>It allows you to align content into columns and rows simultaneously.</p>
+            <code>.grid { display: grid; grid-template-columns: 1fr 1fr; }</code>
+        </section>
+
+        <section class="main-section" id="Variables_and_Root">
+            <header>Variables and Root</header>
+            <p>CSS variables (Custom Properties) allow you to store values for reuse throughout a document.</p>
+            <p>They are defined using the -- prefix and accessed via the var() function.</p>
+            <code>:root { --main-color: #3498db; }</code>
+            <ul>
+                <li>Reusability</li>
+                <li>Dynamic updates</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Responsive_Design">
+            <header>Responsive Design</header>
+            <p>Responsive web design makes your web page look good on all devices (desktops, tablets, and phones).</p>
+            <p>Media queries are a key part of responsive design, allowing for different styles based on screen size.</p>
+            <code>@media (max-width: 600px) { .sidebar { display: none; } }</code>
+        </section>
+
+    </main>
+
+</body>
+</html>
