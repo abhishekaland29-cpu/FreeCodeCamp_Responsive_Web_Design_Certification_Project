@@ -48,7 +48,7 @@ You should use an attribute selector to target the three span elements that are 
 Run the Tests (Ctrl + Enter)
 
 ###
-## Project_3-Technical_Documentation_Page
+## Project_3 : Technical_Documentation_Page
 
 Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
 
@@ -69,5 +69,29 @@ Each element with the class of nav-link should contain text that corresponds to 
 When you click on a navbar element, the page should navigate to the corresponding section of the #main-doc element (e.g. If you click on a .nav-link element that contains the text "Hello world", the page navigates to a section element with that id, and contains the corresponding header).
 On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
 Your technical documentation should use at least one media query.
+Note: Be sure to link your stylesheet in your HTML and apply your CSS.
+
+###
+## Project_4 : Product_Landing_Page
+
+Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
+
+User Stories:
+
+Your product landing page should have a header element with a corresponding id="header".
+You should have an image within the header element with a corresponding id="header-img" (A logo would make a good image here).
+Within the #header element, you should have a nav element with a corresponding id="nav-bar".
+You should have at least three clickable elements inside the nav element, each with the class nav-link.
+When you click a .nav-link button in the nav element, you should be taken to the corresponding section of the landing page.
+You should have an embedded product video with id="video".
+Your landing page should have a form element with a corresponding id="form".
+Within the form, there should be an input field with id="email" where you can enter an email address.
+The #email input field should have placeholder text to let users know what the field is for.
+The #email input field should use HTML5 validation to confirm that the entered text is an email address.
+Within the form, there should be a submit input with a corresponding id="submit".
+When you click the #submit element, the email should be submitted to a static page (use this mock URL: https://www.freecodecamp.org/email-submit).
+The navbar should always be at the top of the viewport.
+Your product landing page should have at least one media query.
+Your product landing page should utilize CSS flexbox at least once.
 Note: Be sure to link your stylesheet in your HTML and apply your CSS.
 
