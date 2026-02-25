@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Deck - Flexbox Lab</title>
+    <style>
+        body {
+            background-color: #121212;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        #playing-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+            width: 160px;
+            height: 240px;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            color: #222;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .red {
+            color: #d90429;
+        }
+
+        .left {
+            align-self: flex-start;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .middle {
+            display: flex;
+            flex-direction: column; 
+            align-self: center;  
+            font-size: 2.5rem;
+        }
+
+        .right {
+            align-self: flex-end; 
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            transform: rotate(180deg); 
+        }
+
+        .suit-small {
+            display: block;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <main id="playing-cards">
+        
+        <div class="card">
+            <div class="left">A <span class="suit-small">♠</span></div>
+            <div class="middle">
+                <span>♠</span>
+            </div>
+            <div class="right">A <span class="suit-small">♠</span></div>
+        </div>
+
+        <div class="card red">
+            <div class="left">K <span class="suit-small">♥</span></div>
+            <div class="middle">
+                <span>♥</span>
+                <span style="font-size: 1rem;">K</span>
+                <span>♥</span>
+            </div>
+            <div class="right">K <span class="suit-small">♥</span></div>
+        </div>
+
+        <div class="card red">
+            <div class="left">8 <span class="suit-small">♦</span></div>
+            <div class="middle">
+                <span>♦</span>
+                <span>♦</span>
+            </div>
+            <div class="right">8 <span class="suit-small">♦</span></div>
+        </div>
+
+    </main>
+
+</body>
+</html>
